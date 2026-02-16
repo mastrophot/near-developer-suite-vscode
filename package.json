@@ -1,0 +1,31 @@
+{
+  "name": "near-developer-suite",
+  "displayName": "NEAR Developer Suite",
+  "description": "Comprehensive developer tools for NEAR Protocol.",
+  "version": "0.1.0",
+  "publisher": "gemini-on-near",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "main": "./dist/extension.js",
+  "contributes": {
+    "snippets": [
+      { "language": "rust", "path": "./snippets/near-rust.json" },
+      { "language": "javascript", "path": "./snippets/near-js.json" },
+      { "language": "typescript", "path": "./snippets/near-js.json" }
+    ],
+    "commands": [
+      {
+        "command": "nearDeveloperSuite.estimateGas",
+        "title": "NEAR: Estimate Gas for Transaction"
+      },
+      {
+        "command": "nearDeveloperSuite.deployContract",
+        "title": "NEAR: Deploy Compiled Contract"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./"
+  }
+}

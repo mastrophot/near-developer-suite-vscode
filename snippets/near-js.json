@@ -1,0 +1,28 @@
+{
+  "NEAR JS Contract": {
+    "prefix": "near-js-contract",
+    "body": [
+      "import { NearBindgen, near, call, view } from 'near-sdk-js';",
+      "",
+      "@NearBindgen({})",
+      "class ${1:MyContract} {",
+      "    constructor() {",
+      "        this.message = 'Hello';",
+      "    }",
+      "",
+      "    @call({})",
+      "    set_message({ message }) {",
+      "        this.message = message;",
+      "    }",
+      "",
+      "    @view({})",
+      "    get_message() {",
+      "        return this.message;",
+      "    }",
+      "}",
+      "",
+      "export { ${1:MyContract} };"
+    ],
+    "description": "Scaffold a basic NEAR JS contract"
+  }
+}

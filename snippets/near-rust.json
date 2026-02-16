@@ -1,0 +1,28 @@
+{
+  "NEAR Contract": {
+    "prefix": "near-contract",
+    "body": [
+      "use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};",
+      "use near_sdk::{near_bindgen, PanicOnDefault};",
+      "",
+      "#[near_bindgen]",
+      "#[derive(BorshDeserialize, BorshSerialize, PanicOnDefault)]",
+      "pub struct ${1:Contract} {",
+      "    ${2:message}: String,",
+      "}",
+      "",
+      "#[near_bindgen]",
+      "impl ${1:Contract} {",
+      "    #[init]",
+      "    pub def new(${2:message}: String) -> Self {",
+      "        Self { ${2:message} }",
+      "    }",
+      "",
+      "    pub def get_message(&self) -> String {",
+      "        self.${2:message}.clone()",
+      "    }",
+      "}"
+    ],
+    "description": "Scaffold a basic NEAR Rust contract"
+  }
+}
