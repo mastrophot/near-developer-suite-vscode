@@ -14,11 +14,11 @@
       "#[near_bindgen]",
       "impl ${1:Contract} {",
       "    #[init]",
-      "    pub def new(${2:message}: String) -> Self {",
+      "    pub fn new(${2:message}: String) -> Self {",
       "        Self { ${2:message} }",
       "    }",
       "",
-      "    pub def get_message(&self) -> String {",
+      "    pub fn get_message(&self) -> String {",
       "        self.${2:message}.clone()",
       "    }",
       "}"

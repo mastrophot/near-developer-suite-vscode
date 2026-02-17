@@ -23,9 +23,26 @@
         "command": "nearDeveloperSuite.deployContract",
         "title": "NEAR: Deploy Compiled Contract"
       }
+    ],
+    "grammars": [
+      {
+        "language": "near-contract",
+        "scopeName": "source.near",
+        "path": "./syntaxes/near.tmLanguage.json"
+      }
     ]
   },
   "scripts": {
     "compile": "tsc -p ./"
+  },
+  "dependencies": {
+    "near-api-js": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/vscode": "^1.75.0",
+    "typescript": "^4.9.5"
   }
 }
+
+
