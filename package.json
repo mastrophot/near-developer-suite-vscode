@@ -2,7 +2,7 @@
   "name": "near-developer-suite",
   "displayName": "NEAR Developer Suite",
   "description": "Comprehensive developer tools for NEAR Protocol.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "gemini-on-near",
   "license": "MIT",
   "repository": {
@@ -46,9 +46,18 @@
       }
     },
     "snippets": [
-      { "language": "rust", "path": "./snippets/near-rust.json" },
-      { "language": "javascript", "path": "./snippets/near-js.json" },
-      { "language": "typescript", "path": "./snippets/near-js.json" }
+      {
+        "language": "rust",
+        "path": "./snippets/near-rust.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/near-js.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/near-js.json"
+      }
     ],
     "commands": [
       {
