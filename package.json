@@ -4,11 +4,42 @@
   "description": "Comprehensive developer tools for NEAR Protocol.",
   "version": "0.1.0",
   "publisher": "gemini-on-near",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:nearDeveloperSuite.estimateGas",
+    "onCommand:nearDeveloperSuite.deployContract"
+  ],
   "engines": {
     "vscode": "^1.75.0"
   },
   "main": "./dist/extension.js",
   "contributes": {
+    "configuration": {
+      "title": "NEAR Developer Suite",
+      "properties": {
+        "nearDeveloperSuite.network": {
+          "type": "string",
+          "default": "testnet",
+          "enum": [
+            "mainnet",
+            "testnet"
+          ],
+          "description": "Target NEAR network for gas checks and deploy command."
+        },
+        "nearDeveloperSuite.accountId": {
+          "type": "string",
+          "default": "",
+          "description": "Default account id used in deploy command prompt."
+        },
+        "nearDeveloperSuite.nearCliCommand": {
+          "type": "string",
+          "default": "near",
+          "description": "CLI command used to deploy (e.g. near, npx near-cli)."
+        }
+      }
+    },
     "snippets": [
       { "language": "rust", "path": "./snippets/near-rust.json" },
       { "language": "javascript", "path": "./snippets/near-js.json" },
@@ -44,5 +75,4 @@
     "typescript": "^4.9.5"
   }
 }
-
 

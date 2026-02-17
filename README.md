@@ -8,14 +8,18 @@ The ultimate VS Code companion for NEAR Protocol developers.
   - `near-contract`: Scaffold a NEAR Rust contract.
   - `near-js-contract`: Scaffold a NEAR JavaScript contract.
 - **Smart Commands:**
-  - `NEAR: Estimate Gas`: Quick gas estimation for method calls.
-  - `NEAR: Deploy Compiled Contract`: Streamlined deployment of WASM files.
-- **Integration:** Built-in support for multiple networks.
+  - `NEAR: Estimate Gas`: Live gas estimation for the selected network.
+  - `NEAR: Deploy Compiled Contract`: Sends a ready-to-run `near-cli` deploy command.
+- **Integration:** Built-in mainnet/testnet switching in settings.
 
 ## Usage
 
 - Open a `.rs` or `.js` file and start typing `near-` to see snippets.
 - Use the Command Palette (`Cmd+Shift+P`) and search for "NEAR" to see available commands.
+- Configure:
+  - `nearDeveloperSuite.network`
+  - `nearDeveloperSuite.accountId`
+  - `nearDeveloperSuite.nearCliCommand`
 
 ## Success Metrics
 
